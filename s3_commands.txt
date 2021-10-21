@@ -1,0 +1,38 @@
+Basic S3 command summary
+Peadar Grant
+
+[These examples use file.txt and bucketname as examples.]
+
+Getting help on the S3 command
+	aws s3 help
+	
+Getting help on an S3 subcommand (e.g. mb)
+	aws s3 mb help
+
+Creating a bucket
+	aws s3 mb s3://bucketname
+	
+Deleting a bucket
+	aws s3 rb s3://bucketname
+	
+Deleting a bucket & remove contents
+	aws s3 rb s3://bucketname --force
+
+Listing all buckets
+	aws s3 ls
+	
+Listing contents of a bucket
+	aws s3 ls s3://bucketname
+	
+Copy a file (file.txt) to a bucket
+	aws s3 cp file.txt s3://bucketname
+	
+Copy a file (file.txt) from a bucket
+	aws s3 cp s3://bucketname/file.txt .
+	
+Re-name an object
+	aws s3 mv s3://bucketname/file.txt s3://bucketname/newname.txt
+	
+Delete a file (file.txt)
+	aws s3 rm s3://bucketname/file.txt
+	
